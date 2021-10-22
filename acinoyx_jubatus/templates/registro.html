@@ -1,0 +1,130 @@
+{% extends "base.html" %} {% block title %}Registro Acinoyx jubatus{% endblock %}
+
+{% block content %}
+<form method="POST">
+  <h3 align="center">Sign Up</h3>
+  <div class="form-group">
+    <label for="nombreCompleto">Nombre completo</label>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="nombre" 
+      name="nombre" 
+      placeholder="Nombre completo"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="correo">Correo electronico</label>
+    <input 
+      type="email" 
+      class="form-control" 
+      id="correo" 
+      name="correo" 
+      placeholder="Correo electrónico"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="edad">Edad</label>
+    <input 
+      type="number" 
+      class="form-control" 
+      id="edad" 
+      name="edad" 
+      placeholder="Edad"
+      min="18"
+      max="100"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="contrasena">Contraseña</label>
+    <input 
+      type="password" 
+      class="form-control" 
+      id="contrasena" 
+      name="contrasena" 
+      placeholder="Contraseña"
+      minlength="8"
+      required
+    />
+  </div>
+  <br />
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style_registro.css') }}">
+  <title>Registro Acinoyx jubatus</title>
+</head>
+<body>
+  <form method="POST">
+    <section class="form-register">
+      <div align="center"> <img src="logo.jpeg"> <img/> </div>
+      <h3>Acinoyx jubatus</h3>
+      <h4>Muy pronto rugirás con tu manada</h4>
+      <div class="form-group">
+        <label for="nombreCompleto">Nombre completo</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="nombre" 
+          name="nombre" 
+          placeholder="Nombre completo"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="correo">Correo electronico</label>
+        <input 
+          type="email" 
+          class="form-control" 
+          id="correo" 
+          name="correo" 
+          placeholder="Correo electrónico"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="edad">Edad</label>
+        <input 
+          type="number" 
+          class="form-control" 
+          id="edad" 
+          name="edad" 
+          placeholder="Edad"
+          min="18"
+          max="100"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="contrasena">Contraseña</label>
+        <input 
+          type="password" 
+          class="form-control" 
+          id="contrasena" 
+          name="contrasena" 
+          placeholder="Contraseña"
+          minlength="8"
+          required
+        />
+      </div>
+      
+    <p> <input type="checkbox" id=condiciones required="required"> acepto las <a href="#">politicas de privacidad y condiciones de uso</a> </p>
+    <button type="submit" class="btn-primary">Registrarse</button>
+    <p>¿Tienes una cuenta?</p>
+    <button type="submit" class="btn-primary" onclick="location.href='/'">Iniciar sesión</button>
+    </section> 
+  </div>
+    <div id="footer"> 
+      Copyright &copy; Acinoyx Jubatus 2021.
+    </div>
+  </form>
+</body>
+{% endblock %}
